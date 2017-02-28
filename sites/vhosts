@@ -1,0 +1,11 @@
+
+<VirtualHost *:80 *:8080>
+        ServerName like-tur-georgia.dev
+        ServerAlias www.like-tur-georgia.dev
+
+        ServerAdmin webmaster@localhost
+        DocumentRoot /var/www/public/like-tur-georgia/
+
+        ErrorLog ${APACHE_LOG_DIR}/error.log
+        CustomLog ${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
