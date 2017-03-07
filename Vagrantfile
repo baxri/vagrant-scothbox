@@ -2,7 +2,11 @@
 # vi: set ft=ruby :
 
 Vagrant.configure("2") do |config|
-
+		
+	config.vm.provider "virtualbox" do |vb|
+		vb.customize ["modifyvm", :id, "--memory", "256"]
+	end
+		
     config.vm.box = "scotch/box"
     config.vm.network "private_network", ip: "192.168.10.20"
     config.vm.hostname = "scotchbox"
